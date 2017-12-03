@@ -2,75 +2,33 @@
 body {
   overflow-x: hidden;
   @include font;
+  font-size: 16pt;
+  color: $white;
 }
 
-p {
-  line-height: 1.75;
+.yellow {
+    color: $yellow !important;
+}
+.light-blue {
+    color: $light-blue !important;
 }
 
-a {
-  color: $primary;
-  &:hover {
-    color: darken($primary, 10%);
-  }
-}
-
-.text-primary {
-  color: $primary !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
   font-weight: 700;
+  font-size: 20pt;
   @include font;
-}
-
-section {
-  padding: 100px 0;
-  h2.section-heading {
-    font-size: 40px;
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-  h3.section-subheading {
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 75px;
-    text-transform: none;
-    @include font;
-  }
-}
-@media(min-width:768px) {
-  section {
-    padding: 150px 0;
-  }
 }
 
 // Button Styles
 .btn {
-  @include font;
-  font-weight: 700;
-}
-
-.btn-xl {
-  font-size: 18px;
-  padding: 20px 40px;
-}
-
-.btn-primary {
-  background-color: $primary;
-  border-color: $primary;
+  background-color: $light-blue;
+  border-color: $yellow;
+  color: $white;
   &:active,
   &:focus,
   &:hover {
-    background-color: darken($primary, 7.5%) !important;
-    border-color: darken($primary, 7.5%) !important;
-    color: white;
+    background-color: darken($light-blue, 7.5%) !important;
+    border-color: darken($yellow, 7.5%) !important;
   }
   &:active,
   &:focus {
@@ -80,12 +38,12 @@ section {
 
 // Highlight color customization
 ::-moz-selection {
-  background: $primary;
+  background: $light-blue;
   text-shadow: none;
 }
 
 ::selection {
-  background: $primary;
+  background: $light-blue;
   text-shadow: none;
 }
 
@@ -98,5 +56,5 @@ img::-moz-selection {
 }
 
 body {
-  -webkit-tap-highlight-color: $primary;
+  -webkit-tap-highlight-color: $light-blue;
 }
