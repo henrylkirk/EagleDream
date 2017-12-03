@@ -1,7 +1,7 @@
 {
   "title": "EagleDream",
   "name": "EagleDream-character-search",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Find WOW character stats.",
   "keywords": [
     "css",
@@ -26,10 +26,10 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "font-awesome": "4.7.0",
-    "jquery": "^3.2.1",
-    "jquery.easing": "^1.4.1"
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
+    "axios": "^0.17.1",
     "browser-sync": "2.18.13",
     "gulp": "^3.9.1",
     "gulp-clean-css": "3.9.0",
