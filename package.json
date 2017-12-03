@@ -1,0 +1,41 @@
+{
+  "title": "EagleDream",
+  "name": "EagleDream-character-search",
+  "version": "1.0",
+  "description": "Find WOW character stats.",
+  "keywords": [
+    "css",
+    "blizzard",
+    "html",
+    "responsive"
+  ],
+  "homepage": "https://github.com/henrylkirk",
+  "bugs": {
+    "url": "https://github.com/henrylkirk",
+    "email": "hxk1231@rit.edu"
+  },
+  "license": "MIT",
+  "author": "Henry Kirk",
+  "contributors": [
+    "Henry Kirk"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henrylkirk"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "font-awesome": "4.7.0",
+    "jquery": "^3.2.1",
+    "jquery.easing": "^1.4.1"
+  },
+  "devDependencies": {
+    "browser-sync": "2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "3.9.0",
+    "gulp-header": "1.8.9",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "3.0.0"
+  }
+}
