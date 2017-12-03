@@ -4,6 +4,9 @@ body {
   @include font;
   font-size: 16pt;
   color: $white;
+  background-image: url("../img/mainbackground.jpg");
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 
 .yellow {
