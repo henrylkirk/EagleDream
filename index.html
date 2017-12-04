@@ -23,172 +23,184 @@
 </head>
 
 <body>
+    <!-- Vue.js App -->
+    <div id="app">
 
-    <!-- Search Area -->
-    <div id="search-area" class="container">
-        <img src="img/logo.png" alt="EagleDream Technologies">
-        <form>
-            <div class="form-group">
-                <input type="text" class="form-control" id="input-name" placeholder="Character Name">
-                <input type="text" class="form-control" id="input-realm" placeholder="Realm Name">
-                <button type="submit" class="btn">Search</button>
+        <div class="columns medium-3" v-if="results && results.length">
+          <div class="card">
+            <div class="card-divider">
+              {{ results }}
             </div>
-        </form>
-    </div>
+          </div>
+        </div>
+        <p v-if="name">{{name}}</p>
 
+        <!-- Search Area -->
+        <div id="search-area" class="container">
+            <img src="img/logo.png" alt="EagleDream Technologies">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" data-minlength="1" id="input-name" placeholder="Character Name">
+                    <input type="text" class="form-control" data-minlength="1" id="input-realm" placeholder="Realm Name">
+                    <button class="btn" type="button">Search</button>
+                </div>
+            </form>
+        </div>
 
-    <!-- Character Area -->
-    <div id="character-area" class="container-fluid">
-        <div class="row">
-            <button id="close"></button>
-            <div class="col-md-8 bordered">
-                <div class="row">
-                    <div class="col-md-8">
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>Header 1</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Cell 1</td>
-                              <td>Cell 2</td>
-                            </tr>
-                            <tr>
-                              <td>Cell 6</td>
-                              <td>Cell 7</td>
-                            </tr>
-                            <tr>
-                              <td>Cell 11</td>
-                              <td>Cell 12</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>Header 1</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Cell 1</td>
-                              <td>Cell 2</td>
-                            </tr>
-                            <tr>
-                              <td>Cell 6</td>
-                              <td>Cell 7</td>
-                            </tr>
-                            <tr>
-                              <td>Cell 11</td>
-                              <td>Cell 12</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>Header 1</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Cell 1</td>
-                              <td>Cell 2</td>
-                            </tr>
-                            <tr>
-                              <td>Cell 6</td>
-                              <td>Cell 7</td>
-                            </tr>
-                            <tr>
-                              <td>Cell 11</td>
-                              <td>Cell 12</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                    </div>
-                    <div class="col-md-4">
-                        <table>
-                          <thead>
-                            <tr>
-                              <th class="yellow">Compare Stats</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Cell 1</td>
-                              <td>Cell 2</td>
-                            </tr>
-                            <tr>
-                              <td>Cell 6</td>
-                              <td>Cell 7</td>
-                            </tr>
-                            <tr>
-                              <td>Cell 11</td>
-                              <td>Cell 12</td>
-                            </tr>
-                          </tbody>
-                        </table>
+        <!-- Character Area -->
+        <div id="character-area" class="container-fluid">
+            <div class="row">
+                <button id="close"></button>
+                <div class="col-md-8 bordered">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Header 1</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Cell 1</td>
+                                  <td>Cell 2</td>
+                                </tr>
+                                <tr>
+                                  <td>Cell 6</td>
+                                  <td>Cell 7</td>
+                                </tr>
+                                <tr>
+                                  <td>Cell 11</td>
+                                  <td>Cell 12</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Header 1</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Cell 1</td>
+                                  <td>Cell 2</td>
+                                </tr>
+                                <tr>
+                                  <td>Cell 6</td>
+                                  <td>Cell 7</td>
+                                </tr>
+                                <tr>
+                                  <td>Cell 11</td>
+                                  <td>Cell 12</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Header 1</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Cell 1</td>
+                                  <td>Cell 2</td>
+                                </tr>
+                                <tr>
+                                  <td>Cell 6</td>
+                                  <td>Cell 7</td>
+                                </tr>
+                                <tr>
+                                  <td>Cell 11</td>
+                                  <td>Cell 12</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-4">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th class="yellow">Compare Stats</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Cell 1</td>
+                                  <td>Cell 2</td>
+                                </tr>
+                                <tr>
+                                  <td>Cell 6</td>
+                                  <td>Cell 7</td>
+                                </tr>
+                                <tr>
+                                  <td>Cell 11</td>
+                                  <td>Cell 12</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 bordered">
-                <h1>My Item Sets</h1>
-                <!-- <table>
-                    <tr>
-                        <td>Helm</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Chest</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Shoulders</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Legs</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Feet</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Trinket</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Back</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table> -->
+                <div class="col-md-4 bordered">
+                    <h1>My Item Sets</h1>
+                    <!-- <table>
+                        <tr>
+                            <td>Helm</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Chest</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Shoulders</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Legs</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Feet</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Trinket</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Back</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table> -->
+                </div>
             </div>
         </div>
-    </div>
+
+    </div><!-- /app -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <!-- Plugin JavaScript -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
     <!-- Custom scripts -->
-    <script src="js/index.min.js"></script>
-    <script src="js/API.js"></script>
+    <!-- <script src="js/API.js"></script> -->
+    <script src="js/app.js"></script>
 
 </body>
 

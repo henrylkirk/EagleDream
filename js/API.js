@@ -13,11 +13,11 @@ function getCharacterData(name, realm) {
         }
     })
     .then(function (response) {
-        console.log(response.data);
+        return response.data;
     })
     .catch(function (error) {
         console.log(error);
     });
 }
-
-getCharacterData("Regex","Dalaran");
+var data = [];
+data = getCharacterData("Regex","Dalaran");
