@@ -6,11 +6,13 @@
 body {
   overflow-x: hidden;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16pt;
+  font-weight: 300;
+  font-size: 12pt;
   color: #fff;
   background-image: url("../img/mainbackground.jpg");
   background-repeat: no-repeat;
-  background-position-x: center; }
+  background-position-x: center;
+  line-height: 2.5; }
 
 .yellow {
   color: #D7A12E !important; }
@@ -19,9 +21,9 @@ body {
   color: #1A8782 !important; }
 
 h1 {
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 700;
-  font-size: 20pt;
-  font-family: 'Roboto Condensed', sans-serif; }
+  font-size: 20pt; }
 
 .btn {
   background-color: #1A8782;
@@ -49,3 +51,14 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: #1A8782; }
+
+#character-area {
+  background-color: rgba(11, 18, 47, 0.7);
+  padding: 70px 10%;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  #character-area .row div {
+    background-color: rgba(11, 18, 47, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 5%; }

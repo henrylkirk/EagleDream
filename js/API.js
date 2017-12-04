@@ -8,7 +8,8 @@ function getCharacterData(name, realm) {
     const url = `${BASE_URL}/character/${realm}/${name}`;
     return axios.get(url,{
         params: {
-          apiKey: API_KEY
+            fields: "stats",
+            apiKey: API_KEY
         }
     })
     .then(function (response) {

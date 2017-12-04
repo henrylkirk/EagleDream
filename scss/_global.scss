@@ -2,11 +2,13 @@
 body {
   overflow-x: hidden;
   @include font;
-  font-size: 16pt;
+  font-weight: 300;
+  font-size: 12pt;
   color: $white;
   background-image: url("../img/mainbackground.jpg");
   background-repeat: no-repeat;
   background-position-x: center;
+  line-height: 2.5;
 }
 
 .yellow {
@@ -17,9 +19,9 @@ body {
 }
 
 h1 {
-  font-weight: 700;
-  font-size: 20pt;
-  @include font;
+    @include font;
+    font-weight: 700;
+    font-size: 20pt;
 }
 
 // Button Styles
