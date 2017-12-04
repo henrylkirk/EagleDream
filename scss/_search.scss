@@ -1,0 +1,35 @@
+// Styles for search form
+
+#search-area {
+    max-width:450px;
+
+    // text fields
+    input[type="text"] {
+        color:$white;
+        background-color: $dark-blue;
+        border-radius: 0;
+        border: 1px solid $yellow;
+    }
+    img {
+        margin: 25px 0px;
+    }
+
+    // Button Styles
+    .btn {
+      background-color: $light-blue;
+      border: none;
+      width:100%;
+      border-radius: 0;
+      color: $white;
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: darken($light-blue, 7.5%) !important;
+        cursor: pointer;
+      }
+      &:active,
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
+      }
+    }
+}

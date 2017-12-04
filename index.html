@@ -25,37 +25,121 @@
 <body>
 
     <!-- Search Area -->
-    <div class="container">
+    <div id="search-area" class="container">
         <img src="img/logo.png" alt="EagleDream Technologies">
         <form>
             <div class="form-group">
-                <input type="email" class="form-control" id="input-name" aria-describedby="characterName" placeholder="Character Name">
-                <input type="email" class="form-control" id="input-realm" aria-describedby="realmName" placeholder="Realm Name">
+                <input type="text" class="form-control" id="input-name" placeholder="Character Name">
+                <input type="text" class="form-control" id="input-realm" placeholder="Realm Name">
+                <button type="submit" class="btn">Search</button>
             </div>
-            <button type="submit" class="btn btn-primary">Search</button>
         </form>
     </div>
 
 
     <!-- Character Area -->
-    <div class="container-fluid" id="character-area">
+    <div id="character-area" class="container-fluid">
         <div class="row">
-            <div class="col-md-8">
+            <button id="close"></button>
+            <div class="col-md-8 bordered">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="col"></div>
-                        <
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Header 1</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Cell 1</td>
+                              <td>Cell 2</td>
+                            </tr>
+                            <tr>
+                              <td>Cell 6</td>
+                              <td>Cell 7</td>
+                            </tr>
+                            <tr>
+                              <td>Cell 11</td>
+                              <td>Cell 12</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Header 1</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Cell 1</td>
+                              <td>Cell 2</td>
+                            </tr>
+                            <tr>
+                              <td>Cell 6</td>
+                              <td>Cell 7</td>
+                            </tr>
+                            <tr>
+                              <td>Cell 11</td>
+                              <td>Cell 12</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Header 1</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Cell 1</td>
+                              <td>Cell 2</td>
+                            </tr>
+                            <tr>
+                              <td>Cell 6</td>
+                              <td>Cell 7</td>
+                            </tr>
+                            <tr>
+                              <td>Cell 11</td>
+                              <td>Cell 12</td>
+                            </tr>
+                          </tbody>
+                        </table>
                     </div>
                     <div class="col-md-4">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th class="yellow">Compare Stats</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Cell 1</td>
+                              <td>Cell 2</td>
+                            </tr>
+                            <tr>
+                              <td>Cell 6</td>
+                              <td>Cell 7</td>
+                            </tr>
+                            <tr>
+                              <td>Cell 11</td>
+                              <td>Cell 12</td>
+                            </tr>
+                          </tbody>
+                        </table>
                     </div>
                 </div>
-                <table>
-                    <tr><h1>Attributes</h1></tr>
-                </table>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 bordered">
                 <h1>My Item Sets</h1>
-                <table>
+                <!-- <table>
                     <tr>
                         <td>Helm</td>
                         <td></td>
@@ -91,7 +175,7 @@
                         <td></td>
                         <td></td>
                     </tr>
-                </table>
+                </table> -->
             </div>
         </div>
     </div>

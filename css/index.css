@@ -6,6 +6,7 @@
 body {
   overflow-x: hidden;
   font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 2px !important;
   font-weight: 300;
   font-size: 12pt;
   color: #fff;
@@ -22,18 +23,9 @@ body {
 
 h1 {
   font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 2px !important;
   font-weight: 700;
   font-size: 20pt; }
-
-.btn {
-  background-color: #1A8782;
-  border-color: #D7A12E;
-  color: #fff; }
-  .btn:active, .btn:focus, .btn:hover {
-    background-color: #146763 !important;
-    border-color: #bb8b24 !important; }
-  .btn:active, .btn:focus {
-    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important; }
 
 ::-moz-selection {
   background: #1A8782;
@@ -56,9 +48,48 @@ body {
   background-color: rgba(11, 18, 47, 0.7);
   padding: 70px 10%;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-  #character-area .row div {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 50px 0px; }
+  #character-area .bordered {
     background-color: rgba(11, 18, 47, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     padding: 5%; }
+  #character-area table {
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    min-width: 170px; }
+    #character-area table td:nth-child(even) {
+      text-align: right; }
+    #character-area table td:nth-child(odd) {
+      color: #D7A12E; }
+  #character-area #close {
+    background: url("../img/open-close.png") no-repeat;
+    position: absolute;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border: none;
+    left: 95%; }
+
+#search-area {
+  max-width: 450px; }
+  #search-area input[type="text"] {
+    color: #fff;
+    background-color: #0B122F;
+    border-radius: 0;
+    border: 1px solid #D7A12E; }
+  #search-area img {
+    margin: 25px 0px; }
+  #search-area .btn {
+    background-color: #1A8782;
+    border: none;
+    width: 100%;
+    border-radius: 0;
+    color: #fff; }
+    #search-area .btn:active, #search-area .btn:focus, #search-area .btn:hover {
+      background-color: #146763 !important;
+      cursor: pointer; }
+    #search-area .btn:active, #search-area .btn:focus {
+      box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important; }

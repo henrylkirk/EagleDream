@@ -24,23 +24,6 @@ h1 {
     font-size: 20pt;
 }
 
-// Button Styles
-.btn {
-  background-color: $light-blue;
-  border-color: $yellow;
-  color: $white;
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: darken($light-blue, 7.5%) !important;
-    border-color: darken($yellow, 7.5%) !important;
-  }
-  &:active,
-  &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
-  }
-}
-
 // Highlight color customization
 ::-moz-selection {
   background: $light-blue;
