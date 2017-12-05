@@ -1,14 +1,12 @@
 const BASE_URL = "https://us.api.battle.net/wow";
 const API_KEY = "czfaxfymsqtcf84fdy7f784qkpfxjkh3";
-const CHARACTER_NAME = "Regex";
-const CHARACTER_REALM = "Dalaran";
-// const url = `${BASE_URL}/character/${CHARACTER_REALM}/${CHARACTER_NAME}`;
 
-
-function buildUrl(name, realm) {
-    return `${BASE_URL}/character/${realm}/${name}`;
+// Function to build a url from base
+function buildUrl(suffix) {
+    return `${BASE_URL}/${suffix}`;
 }
 
+// Vue.js App
 var app = new Vue({
   el: '#app',
   data: {
@@ -17,11 +15,13 @@ var app = new Vue({
     character: {
       name: "Regex",
       realm: "Dalaran"
-    }
-  },
+    },
+    base_url: "https://us.api.battle.net/wow",
+    api_key: "czfaxfymsqtcf84fdy7f784qkpfxjkh3"
+},
   methods: {
       search: function() {
-          let url = buildUrl(this.character.name, this.character.realm);
+          let url = buildUrl(`character/${this.character.realm}/${this.character.name}`);
           axios.get(url,{
               params: {
                   apiKey: API_KEY,
@@ -32,8 +32,6 @@ var app = new Vue({
               this.items = response.data.items;
               this.stats = response.data.stats;
               this.name = response.data.name;
-              // this.items = response.data.items;
-              // console.log(this.data.stats);
               console.log(this.items);
               console.log(this.stats);
           })
@@ -41,7 +39,7 @@ var app = new Vue({
               console.log(error);
           });
       }
-  }
+    }
 });
 
 
