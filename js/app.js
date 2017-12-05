@@ -2,28 +2,45 @@ const BASE_URL = "https://us.api.battle.net/wow";
 const API_KEY = "czfaxfymsqtcf84fdy7f784qkpfxjkh3";
 const CHARACTER_NAME = "Regex";
 const CHARACTER_REALM = "Dalaran";
-const url = `${BASE_URL}/character/${CHARACTER_REALM}/${CHARACTER_NAME}`;
+// const url = `${BASE_URL}/character/${CHARACTER_REALM}/${CHARACTER_NAME}`;
+
+
+function buildUrl(name, realm) {
+    return `${BASE_URL}/character/${realm}/${name}`;
+}
 
 var app = new Vue({
   el: '#app',
   data: {
-    results: [],
-    name: 4
+    items: [],
+    stats: [],
+    character: {
+      name: "Regex",
+      realm: "Dalaran"
+    }
   },
-  mounted() {
-      axios.get(url,{
-          params: {
-              apiKey: API_KEY
-          }
-      })
-      .then((response) => {
-          this.results = response.data;
-          this.name = response.data.name;
-          console.log(this.results);
-      })
-      .catch(function (error) {
-          console.log(error);
-      });
+  methods: {
+      search: function() {
+          let url = buildUrl(this.character.name, this.character.realm);
+          axios.get(url,{
+              params: {
+                  apiKey: API_KEY,
+                  fields: "items, stats"
+              }
+          })
+          .then((response) => {
+              this.items = response.data.items;
+              this.stats = response.data.stats;
+              this.name = response.data.name;
+              // this.items = response.data.items;
+              // console.log(this.data.stats);
+              console.log(this.items);
+              console.log(this.stats);
+          })
+          .catch((error) => {
+              console.log(error);
+          });
+      }
   }
 });
 
