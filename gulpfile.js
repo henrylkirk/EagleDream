@@ -44,22 +44,6 @@ gulp.task('minify-css', ['sass'], function() {
     }))
 });
 
-// Minify custom JS
-gulp.task('minify-js', function() {
-  return gulp.src('js/index.js')
-    .pipe(uglify())
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('js'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-});
-
 // Copy vendor files from /node_modules into /vendor
 // NOTE: requires `npm install` before running!
 gulp.task('copy', function() {
@@ -73,7 +57,7 @@ gulp.task('copy', function() {
 })
 
 // Default task
-gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', ['sass', 'minify-css', 'copy']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
