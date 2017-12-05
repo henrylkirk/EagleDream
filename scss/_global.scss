@@ -9,13 +9,14 @@ body {
   background-repeat: no-repeat;
   background-position-x: center;
   background-attachment: fixed;
-  line-height: 2.5;
+  line-height: 1.9;
 }
 
 .yellow {
     color: $yellow !important;
+    width:100%;
 }
-.light-blue {
+.blue {
     color: $light-blue !important;
 }
 

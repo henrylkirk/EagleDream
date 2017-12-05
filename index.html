@@ -39,139 +39,177 @@
 
         <!-- Character Area -->
         <div id="character-area" class="container-fluid" style="display:none;">
+            <button id="close" v-on:click="close"></button>
             <div class="row">
-                <button id="close" v-on:click="close"></button>
-                <div class="col-md-8 bordered">
+                <div class="col-md-7 bordered">
                     <div class="row">
                         <div class="col-lg-8">
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>Attributes</th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr v-if="stats.str">
-                                  <td>Strength</td>
-                                  <td>{{stats.str}}</td>
-                                </tr>
-                                <tr v-if="stats.agi">
-                                  <td>Agility</td>
-                                  <td>{{stats.agi}}</td>
-                                </tr>
-                                <tr v-if="stats.int">
-                                  <td>Intellect</td>
-                                  <td>{{stats.int}}</td>
-                                </tr>
-                                <tr v-if="stats.sta">
-                                  <td>Stamina</td>
-                                  <td>{{stats.sta}}</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>Defense</th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr v-if="stats.armor">
-                                  <td>Armor</td>
-                                  <td>{{stats.armor}}</td>
-                                </tr>
-                                <tr v-if="stats.dodge">
-                                  <td>Dodge</td>
-                                  <td>{{stats.dodge}}</td>
-                                </tr>
-                                <tr v-if="stats.parry >= 0">
-                                  <td>Parry</td>
-                                  <td>{{stats.parry}}</td>
-                                </tr>
-                                <tr v-if="stats.block >= 0">
-                                  <td>Block</td>
-                                  <td>{{stats.block}}</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>Attack</th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr v-if="stats.mainHandDmgMin">
-                                  <td>Damage</td>
-                                  <td>{{stats.mainHandDmgMin}} - {{stats.mainHandDmgMax}}</td>
-                                </tr>
-                                <tr>
-                                  <td>Speed</td>
-                                  <td>{{stats.offHandSpeed}}/{{stats.mainHandSpeed}}</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>Enhancements</th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr v-if="stats.crit">
-                                  <td>Crit</td>
-                                  <td>{{stats.crit | percent}}</td>
-                                </tr>
-                                <tr v-if="stats.haste">
-                                  <td>Haste</td>
-                                  <td>{{stats.haste | percent}}</td>
-                                </tr>
-                                <tr v-if="stats.mastery">
-                                  <td>Mastery</td>
-                                  <td>{{stats.mastery | percent}}</td>
-                                </tr>
-                                <tr v-if="stats.leech">
-                                  <td>Leech</td>
-                                  <td>{{stats.leech | percent}}</td>
-                                </tr>
-                                <tr v-if="stats.versatility">
-                                  <td>Versatility</td>
-                                  <td>{{stats.versatility | percent}}</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                        </div>
-                        <div class="col-lg-4">
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th class="yellow">Compare Stats</th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Cell 1</td>
-                                  <td>Cell 2</td>
-                                </tr>
-                                <tr>
-                                  <td>Cell 6</td>
-                                  <td>Cell 7</td>
-                                </tr>
-                                <tr>
-                                  <td>Cell 11</td>
-                                  <td>Cell 12</td>
-                                </tr>
-                              </tbody>
-                            </table>
+                            <div class="row">
+                                <div class="col">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Attributes</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-if="stats.health">
+                                                <td>Health</td>
+                                                <td>{{stats.health}}</td>
+                                            </tr>
+                                            <tr v-if="stats.str">
+                                                <td>Strength</td>
+                                                <td>{{stats.str}}</td>
+                                            </tr>
+                                            <tr v-if="stats.agi">
+                                                <td>Agility</td>
+                                                <td class="blue">{{stats.agi}}</td>
+                                            </tr>
+                                            <tr v-if="stats.int">
+                                                <td>Intellect</td>
+                                                <td>{{stats.int}}</td>
+                                            </tr>
+                                            <tr v-if="stats.sta">
+                                                <td>Stamina</td>
+                                                <td class="blue">{{stats.sta}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Defense</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-if="stats.armor">
+                                                <td>Armor</td>
+                                                <td>{{stats.armor | percent}}</td>
+                                            </tr>
+                                            <tr v-if="stats.dodge">
+                                                <td>Dodge</td>
+                                                <td>{{stats.dodge | percent}}</td>
+                                            </tr>
+                                            <tr v-if="stats.parry >= 0">
+                                                <td>Parry</td>
+                                                <td>{{stats.parry | percent}}</td>
+                                            </tr>
+                                            <tr v-if="stats.block >= 0">
+                                                <td>Block</td>
+                                                <td>{{stats.block | percent}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!-- /row -->
+                            <div class="row">
+                                <div class="col">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Attack</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-if="stats.mainHandDmgMin">
+                                                <td>Damage</td>
+                                                <td>{{stats.mainHandDmgMin}} - {{stats.mainHandDmgMax}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Speed</td>
+                                                <td>{{stats.offHandSpeed}}/{{stats.mainHandSpeed}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Enhancements</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-if="stats.crit">
+                                                <td>Crit</td>
+                                                <td>{{stats.crit | percent}}</td>
+                                            </tr>
+                                            <tr v-if="stats.haste">
+                                                <td>Haste</td>
+                                                <td>{{stats.haste | percent}}</td>
+                                            </tr>
+                                            <tr v-if="stats.mastery">
+                                                <td>Mastery</td>
+                                                <td class="blue">{{stats.mastery | percent}}</td>
+                                            </tr>
+                                            <tr v-if="stats.leech">
+                                                <td>Leech</td>
+                                                <td>{{stats.leech | percent}}</td>
+                                            </tr>
+                                            <tr v-if="stats.versatility">
+                                                <td>Versatility</td>
+                                                <td>{{stats.versatility | percent}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!-- /row -->
+                            <div class="row">
+                                <div class="col">
+                                    <table v-if="stats.mana5">
+                                        <thead>
+                                            <tr>
+                                                <th>Spell</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Mana Regen</td>
+                                                <td>{{stats.mana5}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!-- /row -->
+                        </div><!-- /col-lg-8 -->
+                        <div class="col-lg-4 fade-border">
+                            <div class="row">
+                                <div class="col">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="yellow">Compare Stats</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Cell 1</td>
+                                                <td>Cell 2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cell 6</td>
+                                                <td>Cell 7</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cell 11</td>
+                                                <td>Cell 12</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!-- /row -->
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 bordered" id="items">
+                <div class="col-md-4 offset-md-1 bordered" id="items">
                     <h1 class="yellow">My Item Sets</h1>
                     <table>
                         <tbody>
