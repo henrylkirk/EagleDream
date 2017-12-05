@@ -19,7 +19,15 @@ var app = new Vue({
     base_url: "https://us.api.battle.net/wow",
     api_key: "czfaxfymsqtcf84fdy7f784qkpfxjkh3"
 },
-  methods: {
+    filters: {
+      percent: function (value) {
+        if (!value) return ''
+        // value = value.toString()
+        value = value.toFixed(2)
+        return value+"%"
+      }
+    },
+    methods: {
       search: function() {
           let url = buildUrl(`character/${this.character.realm}/${this.character.name}`);
           axios.get(url,{
@@ -51,17 +59,3 @@ var app = new Vue({
       }
     }
 });
-
-
-
-// const vm = new Vue({
-//   el: '#app',
-//   data: {
-//     results: [
-//       {title: "the very first post", abstract: "lorem ipsum some test dimpsum"},
-//       {title: "and then there was the second", abstract: "lorem ipsum some test dimsum"},
-//       {title: "third time's a charm", abstract: "lorem ipsum some test dimsum"},
-//       {title: "four the last time", abstract: "lorem ipsum some test dimsum"}
-//     ]
-//   }
-// });

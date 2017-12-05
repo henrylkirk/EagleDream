@@ -124,23 +124,23 @@
                               <tbody>
                                 <tr v-if="stats.crit">
                                   <td>Crit</td>
-                                  <td>{{stats.crit}}</td>
+                                  <td>{{stats.crit | percent}}</td>
                                 </tr>
                                 <tr v-if="stats.haste">
                                   <td>Haste</td>
-                                  <td>{{stats.haste}}</td>
+                                  <td>{{stats.haste | percent}}</td>
                                 </tr>
                                 <tr v-if="stats.mastery">
                                   <td>Mastery</td>
-                                  <td>{{stats.mastery}}</td>
+                                  <td>{{stats.mastery | percent}}</td>
                                 </tr>
                                 <tr v-if="stats.leech">
                                   <td>Leech</td>
-                                  <td>{{stats.leech}}</td>
+                                  <td>{{stats.leech | percent}}</td>
                                 </tr>
                                 <tr v-if="stats.versatility">
                                   <td>Versatility</td>
-                                  <td>{{stats.versatility}}</td>
+                                  <td>{{stats.versatility | percent}}</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -172,7 +172,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 bordered">
-                    <h1>My Item Sets</h1>
+                    <h1 class="yellow">My Item Sets</h1>
                     <table>
                         <tr v-for="item in items" v-if="item.id">
                             <td>{{item.name}}</td>

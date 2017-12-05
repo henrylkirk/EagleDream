@@ -19,10 +19,10 @@ body {
     color: $light-blue !important;
 }
 
-h1 {
+h1, th {
     @include font;
     font-weight: 700;
-    font-size: 20pt;
+    font-size: 16pt;
 }
 
 // Highlight color customization

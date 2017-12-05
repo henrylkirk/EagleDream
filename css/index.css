@@ -22,11 +22,11 @@ body {
 .light-blue {
   color: #1A8782 !important; }
 
-h1 {
+h1, th {
   font-family: 'Roboto Condensed', sans-serif;
   letter-spacing: 2px !important;
   font-weight: 700;
-  font-size: 20pt; }
+  font-size: 16pt; }
 
 ::-moz-selection {
   background: #1A8782;
