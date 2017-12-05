@@ -20,12 +20,16 @@ var app = new Vue({
     api_key: "czfaxfymsqtcf84fdy7f784qkpfxjkh3"
 },
     filters: {
-      percent: function (value) {
-        if (!value) return ''
-        // value = value.toString()
-        value = value.toFixed(2)
-        return value+"%"
-      }
+        percent: function (value) {
+            if (!value) return ''
+            value = value.toFixed(2)
+            return value+"%"
+        },
+        capitalize: function (value) {
+            if (!value) return ''
+            value = value.toString()
+            return value.charAt(0).toUpperCase() + value.slice(1)
+        }
     },
     methods: {
       search: function() {
@@ -43,6 +47,13 @@ var app = new Vue({
               console.log(this.items);
               console.log(this.stats);
               this.open();
+
+              // key item type
+              let keys = Object.keys(response.data.items);
+              console.log(keys);
+              this.itemTypes = keys;
+              console.log(this.itemTypes);
+              console.log(this.itemTypes);
           })
           .catch((error) => {
               console.log(error);

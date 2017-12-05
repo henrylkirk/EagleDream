@@ -171,13 +171,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 bordered">
+                <div class="col-md-4 bordered" id="items">
                     <h1 class="yellow">My Item Sets</h1>
                     <table>
-                        <tr v-for="item in items" v-if="item.id">
-                            <td>{{item.name}}</td>
-                            <!-- <td>{{base_url}}/{{item.icon}}.jpg?apiKey={{api_key}}</td> -->
-                        </tr>
+                        <tbody>
+                            <tr v-for="(item, type) in items" v-if="item.id">
+                                <td>{{type | capitalize}}</td>
+                                <td>{{item.name}}</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>

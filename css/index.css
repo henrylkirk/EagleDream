@@ -89,6 +89,9 @@ body {
         left: 93%;
         top: initial;
         position: absolute; } }
+  #character-area #items td {
+    text-align: left;
+    color: #D7A12E; }
 
 #search-area {
   max-width: 450px; }
