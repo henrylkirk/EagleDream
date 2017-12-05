@@ -40,9 +40,9 @@
         <div id="character-area" class="container-fluid" style="display:none;">
             <button id="close" v-on:click="close"></button>
             <div class="row">
-                <div class="col-md-7 bordered">
+                <div class="col-lg-7 bordered">
                     <div class="row">
-                        <div class="col-lg-8">
+                        <div id="character-stats" class="col-lg-8">
                             <div class="row">
                                 <div class="col">
                                     <table>
@@ -178,28 +178,23 @@
                                 </div>
                             </div><!-- /row -->
                         </div><!-- /col-lg-8 -->
-                        <div class="col-lg-4 fade-border">
+                        <div id="compare-stats" class="col-lg-4 fade-border">
                             <div class="row">
                                 <div class="col">
+                                    <h1 class="yellow">Compare Stats</h1>
                                     <table>
-                                        <thead>
-                                            <tr>
-                                                <th class="yellow">Compare Stats</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Cell 1</td>
-                                                <td>Cell 2</td>
+                                                <td><img src="img/character1.png" /></td>
+                                                <td><img src="img/character2.png" /></td>
                                             </tr>
                                             <tr>
-                                                <td>Cell 6</td>
-                                                <td>Cell 7</td>
+                                                <td><img src="img/character3.png" /></td>
+                                                <td><img src="img/character4.png" /></td>
                                             </tr>
                                             <tr>
-                                                <td>Cell 11</td>
-                                                <td>Cell 12</td>
+                                                <td><img src="img/character5.png" /></td>
+                                                <td><img src="img/character6.png" /></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -208,13 +203,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 offset-md-1 bordered" id="items">
+                <div class="col-lg-4 offset-lg-1 bordered" id="items">
                     <h1 class="yellow">My Item Sets</h1>
                     <table>
                         <tbody>
                             <tr v-for="(item, type) in items" v-if="item.id">
                                 <td>{{type | capitalize}}</td>
                                 <td>{{item.name}}</td>
+                                <td class="white">0<img src="img/coin.png" /></td>
                             </tr>
                         </tbody>
                     </table>
@@ -225,7 +221,6 @@
     </div><!-- /app -->
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Plugin JavaScript -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
