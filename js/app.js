@@ -11,6 +11,7 @@ var app = new Vue({
     el: '#app',
     data: {
         items: [],
+        itemPrices:[],
         stats: [],
         character: {
             name: "Regex",
@@ -39,11 +40,17 @@ var app = new Vue({
             })
             .then((response) => {
                 this.items = response.data.items;
-                this.stats = response.data.stats;
-                this.name = response.data.name;
                 console.log(this.items);
-                console.log(this.stats);
+                this.stats = response.data.stats;
                 this.open();
+
+                // populate list with each buy price
+                let keys = Object.keys(this.items);
+
+                // keys.forEach(function(key){
+                //     console.log(key);
+                //     console.log(this.items[key]);
+                // })
             })
             .catch((error) => {
                 console.log(error);
@@ -56,6 +63,21 @@ var app = new Vue({
         open: function() { // Open character area
             var characterArea = document.getElementById("character-area");
             characterArea.style.display = '';
+        },
+        getBuyPrice(itemId){
+            let url = buildUrl(`item/${itemId}`);
+            axios.get(url,{
+                params: {
+                    apiKey: API_KEY
+                }
+            })
+            .then((response) => {
+                this.itemPrices.push(response.data.buyPrice)
+                console.log(this.itemPrices);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         }
     }
 });
