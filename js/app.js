@@ -34,10 +34,20 @@ var app = new Vue({
               this.name = response.data.name;
               console.log(this.items);
               console.log(this.stats);
+              this.open();
           })
           .catch((error) => {
               console.log(error);
           });
+      },
+      close: function() {
+          var characterArea = document.getElementById("character-area");
+          // characterArea.style.display = characterArea.style.display === 'none' ? '' : 'none';
+          characterArea.style.display = 'none';
+      },
+      open: function() {
+          var characterArea = document.getElementById("character-area");
+          characterArea.style.display = '';
       }
     }
 });

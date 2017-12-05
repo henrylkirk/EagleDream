@@ -9,9 +9,9 @@
     "html",
     "responsive"
   ],
-  "homepage": "https://github.com/henrylkirk",
+  "homepage": "https://github.com/henrylkirk/EagleDream",
   "bugs": {
-    "url": "https://github.com/henrylkirk",
+    "url": "https://github.com/henrylkirk/EagleDream",
     "email": "hxk1231@rit.edu"
   },
   "license": "MIT",
@@ -21,17 +21,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/henrylkirk"
+    "url": "https://github.com/henrylkirk/EagleDream"
   },
   "dependencies": {
-    "axios": "^0.17.1",
     "bootstrap": "^4.0.0-beta.2",
     "font-awesome": "4.7.0",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.9"
   },
   "devDependencies": {
-    "axios": "^0.17.1",
     "browser-sync": "2.18.13",
     "gulp": "^3.9.1",
     "gulp-clean-css": "3.9.0",
@@ -39,8 +37,5 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "3.0.0"
-  },
-  "scripts": {
-    "start": "node index.min.js"
   }
 }

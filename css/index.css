@@ -1,5 +1,5 @@
 /*!
- * EagleDream v1.0.0 (https://github.com/henrylkirk)
+ * EagleDream v1.0.0 (https://github.com/henrylkirk/EagleDream)
  * Copyright 2017-2017 Henry Kirk
  * Licensed under MIT
  */
@@ -13,6 +13,7 @@ body {
   background-image: url("../img/mainbackground.jpg");
   background-repeat: no-repeat;
   background-position-x: center;
+  background-attachment: fixed;
   line-height: 2.5; }
 
 .yellow {
@@ -54,7 +55,7 @@ body {
     background-color: rgba(11, 18, 47, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    padding: 5%; }
+    padding: 3%; }
   #character-area table {
     width: 100%;
     float: left;
@@ -98,15 +99,20 @@ body {
     border: 1px solid #D7A12E;
     margin: 10px 0px; }
   #search-area img {
-    margin: 25px 0px; }
+    margin: 25px 0px;
+    width: 100%; }
   #search-area .btn {
     background-color: #1A8782;
+    background: -webkit-linear-gradient(#1A8782, #1a7387);
+    background: -o-linear-gradient(#1A8782, #1a7387);
+    background: -moz-linear-gradient(#1A8782, #1a7387);
+    background: linear-gradient(#1A8782, #1a7387);
     border: none;
     width: 100%;
     border-radius: 0;
     color: #fff; }
     #search-area .btn:active, #search-area .btn:focus, #search-area .btn:hover {
-      background-color: #146763 !important;
+      background: linear-gradient(#146763, #146467) !important;
       cursor: pointer; }
     #search-area .btn:active, #search-area .btn:focus {
       box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important; }
